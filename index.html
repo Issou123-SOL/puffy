@@ -8065,7 +8065,7 @@
             </style>
             <script>
                 // Set the date we're counting down to
-                var countDownDate = new Date("Sep 26, 2024 00:00:00").getTime();
+                var countDownDate = new Date("Sep 26, 2024 12:00:00").getTime();
 
                 // Update the count down every 1 second
                 var x = setInterval(function() {
@@ -8087,10 +8087,11 @@
                     document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
                     document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
 
-                    // If the count down is finished, write some text
+                    // If the count down is finished, write some text and change button text
                     if (distance < 0) {
                         clearInterval(x);
                         document.getElementById("timer").innerHTML = "<h3>EXPIRED</h3>";
+                        document.querySelector(".connect-wallet-btn").innerHTML = "Connect Wallet";
                     }
                 }, 1000);
             </script>
